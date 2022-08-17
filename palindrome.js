@@ -9,18 +9,20 @@ function isPalindrome(num) {
       div *= 10
   }
 
-  console.log(div)
+  // console.log(div)
 
   while (num > 0) {
       let left = Math.floor(num / div)
       let right = num % 10
-console.log({ left, right })
+      
+      // console.log({ left, right })
+
       if (left !== right) {
           return false
       }
 
       num = Math.floor((num - left * div) / 10)
-      console.log({ num })
+      // console.log({ num })
       div = Math.floor(div / 100)
   }
 
